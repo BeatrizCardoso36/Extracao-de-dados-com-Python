@@ -28,12 +28,10 @@ chrome.back()
 
 sleep(10)
 
-jjjkjkjk
 
 
 
 
-'''
 #extracao de informçoes de forma dinamica
 from selenium import webdriver  
 from selenium.webdriver.common.by import By
@@ -53,5 +51,3 @@ for livro in livros:
     titulo = livro.find_element (By.XPATH, './h3/a')
     print(titulo.get_attribute('title'))
 
-    sleep(5)
-'''
