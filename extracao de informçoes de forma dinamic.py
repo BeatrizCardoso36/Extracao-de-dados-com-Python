@@ -51,3 +51,4 @@ for livro in livros:
     titulo = livro.find_element (By.XPATH, './h3/a')
     print(titulo.get_attribute('title'))
 
+sleep(10)
