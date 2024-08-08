@@ -56,9 +56,38 @@ sleep(10)
 '''
 
 
-
 #extração de informçoes de forma dinamica
 #intuito é entrar no site,clicar no nome do livro pegar
 #NOME,VALOR E SE TEM EM ESTOQUE
-from selenium import webdriver           #importar a biblioteca selenium
+
+ #importar a biblioteca selenium 
+from selenium import webdriver           
 from selenium.webdriver.common.by import By
+
+#importando a biblioteca time para adicionar uma pausa no codigo
+from time import sleep
+
+#Para abrir o navegador ,o webdriver serve para escolher qual navegador deseja usar
+chrome = webdriver.Chrome()
+chrome.get('https://books.toscrape.com/')              #o GET serve para abrir o site
+
+livros = chrome.find_elements(By.XPATH, '//article[@class="product_pod"]')
+
+for livro in livros:
+    titulo = livro.find_element (By.XPATH, './h3/a')
+    titulo.click()
+    sleep(5)
+
+titulo = chrome.find_element(By.TAG_NAME, )
+preco = chrome.find_element(By.XPATH, '//article[@class="price_color"]')
+estoque = chrome.find_element(By.XPATH, '//article[@class="instock availability"]')
+
+
+
+print(titulo.text)
+print(preco.text)
+print(estoque.text.
+
+
+
+sleep(5)
