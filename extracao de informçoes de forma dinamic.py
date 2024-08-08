@@ -32,6 +32,9 @@ sleep(10)
 
 
 
+
+
+
 #extracao de informçoes de forma dinamica
 from selenium import webdriver  
 from selenium.webdriver.common.by import By
@@ -52,6 +55,9 @@ for livro in livros:
     print(titulo.get_attribute('title'))
 
 sleep(10)
+
+
+
 
 
 
@@ -93,6 +99,8 @@ for livro in livros:
 
     chrome.back()    #quando finalizar as instruções dentro do for,o BACK vai srvir para voltar a pagina anterior e realizar o FOR novamente.
 sleep(5)
+
+
 
 
 
