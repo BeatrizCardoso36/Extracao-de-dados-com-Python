@@ -97,18 +97,29 @@ sleep(5)
 
 
 
+
+
+#Ele serve para criar uma interface para o usuario
+#importar a biblioteca
 import PySimpleGUI as PG
 
+#Criar o layout
 layout = [
     [PG.Text('Hello word')]
 ]
 
+#Serve inserir o titulo da pagina
 window = PG.Window('Primeiro visual', layout)
 
+
+#Serve para printar a imagem pro usuario
 while True:
     event, value = window.read()
     window.eve
 
+#Serve para fechar a aba com X
+    if event ==PG.WIN_CLOSED:
+        break
 
 
 
