@@ -12,7 +12,7 @@ chrome = webdriver.Chrome()
 chrome.get('https://books.toscrape.com/')
 sleep(1)
 
-#Buscando o elemento do titulo do livro utilizando o xpath
+#Buscando o elemento do titulo do livro utilizando o XPHAT()
 titulo = chrome.find_element(By.XPATH, '/html/body/div/div/div/div/section/div[2]/ol/li[1]/article/h3/a')
 #Clicando no titulo do livro
 titulo.click()
@@ -55,7 +55,7 @@ sleep(10)
 
 '''
 
-
+'''
 #extração de informçoes de forma dinamica
 #intuito é entrar no site,clicar no nome do livro pegar
 #NOME,VALOR E SE TEM EM ESTOQUE
@@ -92,3 +92,13 @@ for livro in livros:
 
     chrome.back()    #quando finalizar as instruções dentro do for,o BACK vai srvir para voltar a pagina anterior e realizar o FOR novamente.
 sleep(5)
+'''
+
+
+
+import pyautogui as PG
+
+layout = [
+    [PG]
+    ,
+]
