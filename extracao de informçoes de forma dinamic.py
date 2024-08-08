@@ -148,6 +148,10 @@ layout = [
     [ps.Button('1', size=(12,2)),ps.Button('2', size=(12,2)),ps.Button('3', size=(12,2)), ps.Button('+', size=(12,2))],
     [ps.Button('', size=(12,2), disabled=True),ps.Button('0', size=(12,2)),ps.Button(',', size=(12,2)), ps.Button('X', size=(12,2))],
 ]
+
+ps.theme('pink and red')
+
+
 window = ps.Window('Calculadora', layout)
 
 primeiro_numero = ''
@@ -159,6 +163,6 @@ while True:
 
     if evento == ps.WIN_CLOSED:
         break
-    b kxcdb \jmk
+    
 
 
