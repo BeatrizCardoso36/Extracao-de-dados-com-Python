@@ -135,21 +135,29 @@ while True:
 
 #Utilização da biblioteca PySimpleGUI
 #Importando a biblioteca e dando nome a ele
-import PySimpleGUI as PG
+import PySimpleGUI as ps
+
+
 
 layout = [
-    [PG.Text('Olá,seja bem-vindo')],
-    [PG.Text('digite seu nome: ' Key='teste')],
-    [PG.Input(Key='nome'), PG.Button('Testar')],
+    [ps.Text('', font=('Helvetica', 8), key='conta')],
+    [ps.Text('0', font=('Helvetica', 20), key='digitando')],
+    [ps.Button('', size=(12,2), disabled=True), ps.Button('', size=(12,2), disabled=True), ps.Button('=', size=(12,2)),ps.Button('Limpar', size=(12,2))],
+    [ps.Button('7', size=(12,2)),ps.Button('8', size=(12,2)),ps.Button('9', size=(12,2)), ps.Button('/', size=(12,2))],
+    [ps.Button('4', size=(12,2)),ps.Button('5', size=(12,2)),ps.Button('6', size=(12,2)), ps.Button('-', size=(12,2))],
+    [ps.Button('1', size=(12,2)),ps.Button('2', size=(12,2)),ps.Button('3', size=(12,2)), ps.Button('+', size=(12,2))],
+    [ps.Button('', size=(12,2), disabled=True),ps.Button('0', size=(12,2)),ps.Button(',', size=(12,2)), ps.Button('X', size=(12,2))],
 ]
+window = ps.Window('Calculadora', layout)
 
-window = PG.Window('primeira interface')
-
+primeiro_numero = ''
+operador = ''
+segundo_numero = ''
+resultado = ''
 while True:
     evento, valor = window.read()
 
-    if evento =='Testar':
-        print(valor['nome'])
-
-    if evento == PG.WIN_CLOSED:
+    if evento == ps.WIN_CLOSED:
         break
+
+
