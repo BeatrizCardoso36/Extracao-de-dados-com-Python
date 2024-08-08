@@ -1,4 +1,4 @@
-#scraping de dados com python,biblioteca selenium(serve para extrair dados /raspagem )
+'''#scraping de dados com python,biblioteca selenium(serve para extrair dados /raspagem )
 # Importando webdriver e By da biblioteca selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -100,13 +100,13 @@ for livro in livros:
     chrome.back()    #quando finalizar as instruções dentro do for,o BACK vai srvir para voltar a pagina anterior e realizar o FOR novamente.
 sleep(5)
 
+'''
 
 
 
 
 
-
-
+'''
 #Ele serve para criar uma interface para o usuario
 #importar a biblioteca
 import PySimpleGUI as PG
@@ -129,4 +129,27 @@ while True:
     if event ==PG.WIN_CLOSED:
         break
 
+'''
 
+
+
+#Utilização da biblioteca PySimpleGUI
+#Importando a biblioteca e dando nome a ele
+import PySimpleGUI as PG
+
+layout = [
+    [PG.Text('Olá,seja bem-vindo')],
+    [PG.Text('digite seu nome: ' Key='teste')],
+    [PG.Input(Key='nome'), PG.Button('Testar')],
+]
+
+window = PG.Window('primeira interface')
+
+while True:
+    evento, valor = window.read()
+
+    if evento =='Testar':
+        print(valor['nome'])
+
+    if evento == PG.WIN_CLOSED:
+        break
