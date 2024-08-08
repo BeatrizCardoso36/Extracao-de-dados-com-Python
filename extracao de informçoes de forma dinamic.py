@@ -1,4 +1,4 @@
-'''#scraping de dados com python,biblioteca selenium(serve para extrair dados /raspagem )
+#scraping de dados com python,biblioteca selenium(serve para extrair dados /raspagem )
 # Importando webdriver e By da biblioteca selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -28,10 +28,10 @@ chrome.back()
 
 sleep(10)
 
-'''
 
 
-'''
+
+
 #extracao de informçoes de forma dinamica
 from selenium import webdriver  
 from selenium.webdriver.common.by import By
@@ -53,9 +53,10 @@ for livro in livros:
 
 sleep(10)
 
-'''
 
-'''
+
+
+
 #extração de informçoes de forma dinamica
 #intuito é entrar no site,clicar no nome do livro pegar
 #NOME,VALOR E SE TEM EM ESTOQUE
@@ -92,13 +93,22 @@ for livro in livros:
 
     chrome.back()    #quando finalizar as instruções dentro do for,o BACK vai srvir para voltar a pagina anterior e realizar o FOR novamente.
 sleep(5)
-'''
 
 
 
-import pyautogui as PG
+
+import PySimpleGUI as PG
 
 layout = [
-    [PG]
-    ,
+    [PG.Text('Hello word')]
 ]
+
+window = PG.Window('Primeiro visual', layout)
+
+while True:
+    event, value = window.read()
+    window.eve
+
+
+
+
