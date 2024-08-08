@@ -87,7 +87,7 @@ estoque = chrome.find_element(By.XPATH, '//article[@class="instock availability"
 
 print(titulo.text)
 print(preco.text)
-print(estoque.text)
+print(estoque.text.replace(' In stook (', '').replace(' available)', '')')))
 
 
 
