@@ -60,14 +60,14 @@ sleep(10)
 #intuito é entrar no site,clicar no nome do livro pegar
 #NOME,VALOR E SE TEM EM ESTOQUE
 
- #importar a biblioteca selenium 
+ #importar a biblioteca selenium.
 from selenium import webdriver           
 from selenium.webdriver.common.by import By
 
-#importando a biblioteca time para adicionar uma pausa no codigo
+#importando a biblioteca time para adicionar uma pausa no codigo.
 from time import sleep
 
-#Para abrir o navegador ,o webdriver serve para escolher qual navegador deseja usar
+#Para abrir o navegador ,o webdriver serve para escolher qual navegador deseja usar.
 chrome = webdriver.Chrome()
 chrome.get('https://books.toscrape.com/')              #o GET serve para abrir o site
 
@@ -78,17 +78,17 @@ for livro in livros:
     titulo.click()
     sleep(5)
 
-#Pega o titulo,preço e quantidade em estoque
-titulo = chrome.find_element(By.TAG_NAME,'h1' )
-preco = chrome.find_element(By.XPATH, '//article[@class="price_color"]')
-estoque = chrome.find_element(By.XPATH, '//article[@class="instock availability"]')
+    #Pega o titulo,preço e quantidade em estoque.
+    titulo = chrome.find_element(By.TAG_NAME,'h1' )
+    preco = chrome.find_element(By.XPATH, '//p[@class="price_color"]')
+    estoque = chrome.find_element(By.XPATH, '//p[@class="instock availability"]')
 
 
 
-print(titulo.text)
-print(preco.text)
-print(estoque.text.replace(' In stook (', '').replace(' available)', '')')))
+    print(titulo.text)
+    print(preco.text)
+    print(estoque.text.replace(' In stook (', '').replace(' available)', ''))
 
 
-
+    chrome.back()    #quando finalizar as instruções dentro do for,o BACK vai srvir para voltar a pagina anterior e realizar o FOR novamente.
 sleep(5)
