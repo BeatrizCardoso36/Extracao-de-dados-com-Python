@@ -159,5 +159,6 @@ while True:
 
     if evento == ps.WIN_CLOSED:
         break
+    b kxcdb \jmk
 
 
