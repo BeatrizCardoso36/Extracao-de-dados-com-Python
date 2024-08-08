@@ -78,7 +78,8 @@ for livro in livros:
     titulo.click()
     sleep(5)
 
-titulo = chrome.find_element(By.TAG_NAME, )
+#Pega o titulo,preço e quantidade em estoque
+titulo = chrome.find_element(By.TAG_NAME,'h1' )
 preco = chrome.find_element(By.XPATH, '//article[@class="price_color"]')
 estoque = chrome.find_element(By.XPATH, '//article[@class="instock availability"]')
 
@@ -86,7 +87,7 @@ estoque = chrome.find_element(By.XPATH, '//article[@class="instock availability"
 
 print(titulo.text)
 print(preco.text)
-print(estoque.text.
+print(estoque.text)
 
 
 
