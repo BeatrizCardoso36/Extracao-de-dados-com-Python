@@ -174,7 +174,7 @@ while True:
     elif evento not in operadores and op !='':
         n2 += evento
 
-
+    
     print(n1)
     print(n2)
     print(op)
