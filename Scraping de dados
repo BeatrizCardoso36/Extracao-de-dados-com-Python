@@ -149,7 +149,7 @@ layout = [
     [ps.Button('%', size=(10,5), p=0), ps.Button('0', size=(10,5), p=0), ps.Button(',', size=(10,5), p=0), ps.Button('=', size=(10,5), p=0)],
     ]
 
-ps.theme('pink and red')
+ps.theme('pink')
 
 
 window = ps.Window('Calculadora', layout)
@@ -174,10 +174,17 @@ while True:
     elif evento not in operadores and op !='':
         n2 += evento
 
-    
+
+    else:
+        n1= float(n1)
+        n2= float(n2)
+        if op =='+':
+            print(soma(n1,n2))
+
     print(n1)
-    print(n2)
     print(op)
+    print(n2)
+    
 
     if evento == ps.WIN_CLOSED:
         break
