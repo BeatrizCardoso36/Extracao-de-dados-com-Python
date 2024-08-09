@@ -140,14 +140,14 @@ import PySimpleGUI as ps
 
 
 layout = [
-    [ps.Text('', font=('Helvetica', 8), key='conta')],
-    [ps.Text('0', font=('Helvetica', 20), key='digitando')],
-    [ps.Button('', size=(12,2), disabled=True), ps.Button('', size=(12,2), disabled=True), ps.Button('=', size=(12,2)),ps.Button('Limpar', size=(12,2))],
-    [ps.Button('7', size=(12,2)),ps.Button('8', size=(12,2)),ps.Button('9', size=(12,2)), ps.Button('/', size=(12,2))],
-    [ps.Button('4', size=(12,2)),ps.Button('5', size=(12,2)),ps.Button('6', size=(12,2)), ps.Button('-', size=(12,2))],
-    [ps.Button('1', size=(12,2)),ps.Button('2', size=(12,2)),ps.Button('3', size=(12,2)), ps.Button('+', size=(12,2))],
-    [ps.Button('', size=(12,2), disabled=True),ps.Button('0', size=(12,2)),ps.Button(',', size=(12,2)), ps.Button('X', size=(12,2))],
-]
+    [ps.Text('', size=(42,5))],
+    [ps.Text('', size=(42,5))],
+    [ps.Button('Limpar', size=(31,5), p=(1,0,0,0)),ps.Button('/', size=(10,5), p=(1,0,0,0))],
+    [ps.Button('7', size=(10,5), p=0), ps.Button('8', size=(10,5), p=0), ps.Button('9', size=(10,5), p=0), ps.Button('x', size=(10,5), p=0)],
+    [ps.Button('4', size=(10,5), p=0), ps.Button('5', size=(10,5), p=0), ps.Button('6', size=(10,5), p=0), ps.Button('-', size=(10,5), p=0)],
+    [ps.Button('1', size=(10,5), p=0), ps.Button('2', size=(10,5), p=0), ps.Button('3', size=(10,5), p=0), ps.Button('+', size=(10,5), p=0)],
+    [ps.Button('%', size=(10,5), p=0), ps.Button('0', size=(10,5), p=0), ps.Button(',', size=(10,5), p=0), ps.Button('=', size=(10,5), p=0)],
+    ]
 
 ps.theme('pink and red')
 
@@ -167,12 +167,17 @@ while True:
 
     operadores = ['+','-','x','/','%','+']
 
-    if evento not in operadores and op=='':
-        n1+=evento
-    elif evento in operadores:
-        op=evento
+    if evento not in operadores and op== '':
+        n1 += evento
+    elif evento in operadores and op != '=':
+        op = evento
     elif evento not in operadores and op !='':
-        n2+=evento
+        n2 += evento
+
+
+    print(n1)
+    print(n2)
+    print(op)
 
     if evento == ps.WIN_CLOSED:
         break
