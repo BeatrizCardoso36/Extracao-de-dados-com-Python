@@ -153,6 +153,10 @@ ps.theme('pink and red')
 
 
 window = ps.Window('Calculadora', layout)
+n1 = ''
+n2 = ''
+op = '' 
+
 
 primeiro_numero = ''
 operador = ''
@@ -160,6 +164,15 @@ segundo_numero = ''
 resultado = ''
 while True:
     evento, valor = window.read()
+
+    operadores = ['+','-','x','/','%','+']
+
+    if evento not in operadores and op=='':
+        n1+=evento
+    elif evento in operadores:
+        op=evento
+    elif evento not in operadores and op !='':
+        n2+=evento
 
     if evento == ps.WIN_CLOSED:
         break
